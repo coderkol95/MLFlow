@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/anupam/Documents/Codebase/Studies/MLFlow/mlruns/0/617e0c979e404985a2c9bdd58468cef7/artifacts
+end_time: 1692964534003
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 617e0c979e404985a2c9bdd58468cef7
+run_name: enchanting-chimp-256
+run_uuid: 617e0c979e404985a2c9bdd58468cef7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692964533846
+status: 4
+tags: []
+user_id: anupam

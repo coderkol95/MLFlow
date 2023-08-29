@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/anupam/Documents/Codebase/Studies/MLFlow/mlruns/0/c0e7f54b15824401a97238e0a1c35a86/artifacts
+end_time: 1692970529690
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c0e7f54b15824401a97238e0a1c35a86
+run_name: enchanting-rat-103
+run_uuid: c0e7f54b15824401a97238e0a1c35a86
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692970529682
+status: 4
+tags: []
+user_id: anupam

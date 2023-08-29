@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/anupam/Documents/Codebase/Studies/MLFlow/mlruns/0/9ddd2005c6094bbda4208a644fc8bf9d/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9ddd2005c6094bbda4208a644fc8bf9d
+run_name: skillful-gnu-175
+run_uuid: 9ddd2005c6094bbda4208a644fc8bf9d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1693283586399
+status: 1
+tags: []
+user_id: anupam

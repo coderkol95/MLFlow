@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/anupam/Documents/Codebase/Studies/MLFlow/mlruns/0/7b7c07f2eb124915969f9afa87cf1ceb/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7b7c07f2eb124915969f9afa87cf1ceb
+run_name: stately-sloth-865
+run_uuid: 7b7c07f2eb124915969f9afa87cf1ceb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692967343285
+status: 1
+tags: []
+user_id: anupam

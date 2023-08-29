@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/anupam/Documents/Codebase/Studies/MLFlow/mlruns/0/79dc0430781f4e06be0ab8079e80c623/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 79dc0430781f4e06be0ab8079e80c623
+run_name: exultant-hare-675
+run_uuid: 79dc0430781f4e06be0ab8079e80c623
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692968074143
+status: 1
+tags: []
+user_id: anupam

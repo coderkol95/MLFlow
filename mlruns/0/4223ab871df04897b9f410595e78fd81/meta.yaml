@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/anupam/Documents/Codebase/Studies/MLFlow/mlruns/0/4223ab871df04897b9f410595e78fd81/artifacts
+end_time: 1692966526821
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4223ab871df04897b9f410595e78fd81
+run_name: suave-hound-904
+run_uuid: 4223ab871df04897b9f410595e78fd81
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692966526500
+status: 4
+tags: []
+user_id: anupam

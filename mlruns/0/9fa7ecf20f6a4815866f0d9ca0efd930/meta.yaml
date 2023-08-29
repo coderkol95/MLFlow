@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/anupam/Documents/Codebase/Studies/MLFlow/mlruns/0/9fa7ecf20f6a4815866f0d9ca0efd930/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9fa7ecf20f6a4815866f0d9ca0efd930
+run_name: shivering-worm-462
+run_uuid: 9fa7ecf20f6a4815866f0d9ca0efd930
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692963978104
+status: 1
+tags: []
+user_id: anupam

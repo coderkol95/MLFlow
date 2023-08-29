@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/anupam/Documents/Codebase/Studies/MLFlow/mlruns/0/33dbdb7127984f0e9300625e984f9017/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 33dbdb7127984f0e9300625e984f9017
+run_name: abundant-cat-211
+run_uuid: 33dbdb7127984f0e9300625e984f9017
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692967140139
+status: 1
+tags: []
+user_id: anupam

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/anupam/Documents/Codebase/Studies/MLFlow/mlruns/0/f567ae33cdb349328f85abbc81a4f819/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f567ae33cdb349328f85abbc81a4f819
+run_name: merciful-donkey-417
+run_uuid: f567ae33cdb349328f85abbc81a4f819
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692963909353
+status: 1
+tags: []
+user_id: anupam
