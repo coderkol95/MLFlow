@@ -54,19 +54,20 @@ if __name__ == "__main__":
 
     X,y=read_data()
     X_train, X_test,y_train,y_test = train_test_split(X,y,random_state=RANDOM_STATE)
+    trainset=np.c_[X_train,y_train]
+    testset=np.c_[X_test,y_test]
 
-    # CMD line inputs for model args
-    argp=argparse.ArgumentParser()
-    for (param,def_value) in zip(model_params,default_param_values):
-        argp.add_argument(f"--{param}",default=def_value)
+    np.savetxt(fname="sklearn/data/trainset.csv",X=trainset, delimiter=',')
+    np.savetxt(fname="sklearn/data/testset.csv",X=trainset, delimiter=',')
 
-    arguments=argp.parse_args()._get_kwargs()
-    # Here I am using float, this is hard coded.
-    model_args={f'model__{x[0]}':float(x[1]) for x in arguments}
+    model_args={'model__l1_ratio':0.01, 'model__alpha':0.05}
 
     pipe = Pipeline([('data_pipe',data_pipe),('model',model_pipe)])
 
     with mlflow.start_run():
+        mlflow.log_input(mlflow.data.from_numpy(features=X_train,targets=y_train,source="sklearn/data/trainset.csv"), context='train')
+        mlflow.log_input(mlflow.data.from_numpy(features=X_test,targets=y_test,source="sklearn/data/testset.csv"), context='test')
+        mlflow.set_tag("release","training")
         pipe.set_params(**model_args)
         pipe.fit(X_train, y_train)
 
@@ -90,10 +91,6 @@ if __name__ == "__main__":
 
         # Model registry does not work with file store
         if tracking_url_type_store != "file":
-            # Register the model
-            # There are other ways to use the Model Registry, which depends on the use case,
-            # please refer to the doc for more information:
-            # https://mlflow.org/docs/latest/model-registry.html#api-workflow
             mlflow.sklearn.log_model(
                 pipe, "model", registered_model_name="ElasticnetWineModel", signature=signature
             )
