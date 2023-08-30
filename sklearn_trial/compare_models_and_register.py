@@ -15,6 +15,6 @@ print(f"Top model from run {top_model['runID']} with alpha {top_model['alpha']} 
 with open("top_model.json","w") as f:
     json.dump(top_model,f)
 
-result = mlflow.register_model(
+mlflow.register_model(
     f"runs:/{top_model['runID']}/model", "dummy_data_predictor",tags={"alpha":top_model['alpha'],'l1_ratio':top_model['l1_ratio']}
 )

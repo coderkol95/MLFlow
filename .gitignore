@@ -1,2 +1,5 @@
 .env
 mlruns
+data
+sklearn_trial/scratchpad.ipynb
+scratchpad.ipynb
