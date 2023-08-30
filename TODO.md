@@ -10,12 +10,12 @@
 [ ] Dockerization of training and serving env
 
 # Neural network
-[ ] Hyperparameter modification tracking via MLFlow projects
-[ ] Datset logging
-[ ] Comparison between different models and automatically obtaining the best model
+[X] Hyperparameter modification tracking via MLFlow projects
+[ ] Datset logging - to be done in dataset tracking s/w
+[X] Comparison between different models and automatically obtaining the best model
 [ ] MLProject setup
-[ ] Model registration with tags
-[ ] Serving the latest model from model registry
+[X] Model registration with tags
+[X] Serving the latest model from model registry
 [ ] Model performance assessment on different types of data
-[ ] Staging vs production
+[X] Staging vs production - change state
 [ ] Dockerization of training and serving env
