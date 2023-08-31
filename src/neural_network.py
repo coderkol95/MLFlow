@@ -5,15 +5,16 @@ from torch.optim import Adam, RMSprop
 
 class regresion_network(pl.LightningModule):
 
-    def __init__(self):
-        super(regresion_network,self).__init__()        
+    def __init__(self, lr):
+        super(regresion_network,self).__init__()
+        self.lr=lr
         self.loss=mse_loss
         self.inp=torch.nn.Linear(in_features=5,out_features=10)
         # self.h1=torch.nn.Linear(in_features=10,out_features=10)
         self.out=torch.nn.Linear(in_features=10,out_features=1)
 
     def configure_optimizers(self):
-        return Adam(params=self.parameters(), lr=0.02)
+        return Adam(params=self.parameters(), lr=self.lr)
       
     def forward(self, X):
         

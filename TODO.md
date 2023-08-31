@@ -13,9 +13,9 @@
 [X] Hyperparameter modification tracking via MLFlow projects
 [ ] Datset logging - to be done in dataset tracking s/w
 [X] Comparison between different models and automatically obtaining the best model
-[ ] MLProject setup
+[X] MLProject setup for training, registration & deployment to run workflows automatically with CLI arguments
 [X] Model registration with tags
 [X] Serving the latest model from model registry
 [ ] Model performance assessment on different types of data
 [X] Staging vs production - change state
-[ ] Dockerization of training and serving env
+[ ] Dockerization of training and serving env through kubernetes services
