@@ -10,18 +10,20 @@ import torch
 import numpy as np
 import os
 import argparse
+import json
 from datetime import datetime
 
+with open('config.json','r') as f:
+    config = json.load(f)
+RANDOM_STATE=config['RANDOM STATE']
 class log_losses(Callback):
 
     def on_train_epoch_end(self, trainer, pl_module):
         mlflow.log_metric('train_loss_epochs', trainer.logged_metrics['train_loss'])
     def on_validation_epoch_end(self, trainer, pl_module):
         mlflow.log_metric('val_loss_epochs', trainer.logged_metrics['val_loss'])
-    def on_test_epoch_end(self, trainer, pl_module):
-        mlflow.log_metric('test_loss_epochs', trainer.logged_metrics['test_loss'])
 
-def set_seed(seed: int = 42) -> None:
+def set_seed(seed: int = RANDOM_STATE) -> None:
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)

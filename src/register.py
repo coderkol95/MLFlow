@@ -23,9 +23,9 @@ def register_model(model_name, metric,lookback_duration):
 if __name__=="__main__":
 
     a=argparse.ArgumentParser()
-    a.add_argument("metric",type=str,default="test_loss")
-    a.add_argument("model_name", type=str, default=f"regression_NN_on{str(datetime.today().date()).replace('-','_')}")
-    a.add_argument("lookback_duration",type=str,default="7")
+    a.add_argument("--metric",type=str,default="test_loss")
+    a.add_argument("--model_name", type=str, default=f"regression_NN_on{str(datetime.today().date()).replace('-','_')}")
+    a.add_argument("--lookback_duration",type=str,default="7")
     args=a.parse_args()
     metric=args.metric
     model_name=args.model_name
