@@ -1,8 +1,8 @@
 import pytorch_lightning as pl
 import mlflow.pytorch
-from mlflow import log_params
 from pytorch_lightning.callbacks.early_stopping import EarlyStopping
 from pytorch_lightning.callbacks.model_checkpoint import ModelCheckpoint
+from pytorch_lightning.callbacks import Callback
 from data_work import data_module
 from neural_network import regresion_network
 # from pyngrok import ngrok,conf
@@ -11,6 +11,15 @@ import numpy as np
 import os
 import argparse
 from datetime import datetime
+
+class log_losses(Callback):
+
+    def on_train_epoch_end(self, trainer, pl_module):
+        mlflow.log_metric('train_loss_epochs', trainer.logged_metrics['train_loss'])
+    def on_validation_epoch_end(self, trainer, pl_module):
+        mlflow.log_metric('val_loss_epochs', trainer.logged_metrics['val_loss'])
+    def on_test_epoch_end(self, trainer, pl_module):
+        mlflow.log_metric('test_loss_epochs', trainer.logged_metrics['test_loss'])
 
 def set_seed(seed: int = 42) -> None:
     np.random.seed(seed)
@@ -26,7 +35,7 @@ def set_seed(seed: int = 42) -> None:
 def train(epochs,lr):
     early_stop = EarlyStopping(monitor="val_loss", mode="min", patience=5)
     checkpoint = ModelCheckpoint(monitor="val_loss")
-    callbacks=[early_stop,checkpoint]
+    callbacks=[early_stop,checkpoint, log_losses()]
     set_seed()
     trainer=pl.Trainer(max_epochs=epochs, enable_progress_bar=True, callbacks=callbacks)
     data=data_module()
